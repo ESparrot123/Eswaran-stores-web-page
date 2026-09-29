@@ -1,0 +1,476 @@
+/* Pickbo custom CSS
+   Bootstrap 5.3 handles the responsive grid and utilities.
+   This file adds the Pickbo visual identity.
+*/
+
+:root {
+  --pickbo-dark: #111111;
+  --pickbo-accent: #ff6b35;
+  --pickbo-soft: #fff4ee;
+  --pickbo-border: #e8e8e8;
+  --pickbo-muted: #6c757d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--pickbo-dark);
+  background: #fff;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.announcement {
+  background: var(--pickbo-dark);
+  color: #fff;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.brand {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  color: var(--pickbo-dark);
+}
+
+.brand span,
+.accent-text {
+  color: var(--pickbo-accent);
+}
+
+.navbar .nav-link {
+  color: #555;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--pickbo-dark);
+}
+
+.icon-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 0.25rem 0.45rem;
+}
+
+.cart-link {
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+.cart-link .badge {
+  background: var(--pickbo-accent);
+  color: #fff;
+}
+
+.hero-section {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(255, 107, 53, 0.12), transparent 25%),
+    linear-gradient(180deg, #fff 0%, #fffaf7 100%);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--pickbo-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.eyebrow.light {
+  color: #ff9a78;
+}
+
+.hero-card {
+  min-height: 480px;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  background: #f1e8df;
+  display: flex;
+  align-items: flex-end;
+  padding: 2.5rem;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.10);
+}
+
+.hero-card-content {
+  position: relative;
+  z-index: 3;
+  max-width: 330px;
+}
+
+.hero-card h2 {
+  font-size: 2.6rem;
+  font-weight: 850;
+  letter-spacing: -0.05em;
+  margin-top: 1rem;
+}
+
+.hero-pill,
+.product-badge {
+  display: inline-block;
+  background: #fff;
+  color: var(--pickbo-dark);
+  border-radius: 50rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.orb-one {
+  width: 320px;
+  height: 320px;
+  right: -70px;
+  top: -40px;
+  background: #f9a77f;
+}
+
+.orb-two {
+  width: 240px;
+  height: 240px;
+  left: -90px;
+  bottom: -100px;
+  background: #fff;
+  opacity: 0.75;
+}
+
+.hero-product {
+  position: absolute;
+  right: 12%;
+  top: 25%;
+  width: 180px;
+  height: 230px;
+  border-radius: 2rem;
+  background: #171717;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 7rem;
+  font-weight: 900;
+  transform: rotate(8deg);
+  z-index: 2;
+  box-shadow: 25px 25px 40px rgba(0, 0, 0, 0.18);
+}
+
+.trust-row strong,
+.trust-row small {
+  display: block;
+}
+
+.trust-row strong {
+  font-size: 1.25rem;
+}
+
+.trust-row small {
+  color: var(--pickbo-muted);
+  margin-top: 0.2rem;
+}
+
+.search-section {
+  padding: 0 0 2rem;
+  background: #fffaf7;
+}
+
+.search-box {
+  background: #fff;
+  border: 1px solid var(--pickbo-border);
+  border-radius: 1rem;
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.search-symbol {
+  font-size: 1.5rem;
+  padding: 0 0.75rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.category-card {
+  display: block;
+  padding: 1.5rem;
+  min-height: 180px;
+  border-radius: 1.25rem;
+  color: var(--pickbo-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  color: var(--pickbo-dark);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.category-card h5 {
+  font-weight: 800;
+  margin-top: 1.3rem;
+}
+
+.category-card p {
+  color: var(--pickbo-muted);
+  margin: 0;
+}
+
+.category-fashion { background: #f5e8e2; }
+.category-tech { background: #e7eef8; }
+.category-home { background: #e8f0e8; }
+.category-beauty { background: #f3e5ef; }
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid var(--pickbo-border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+.product-image {
+  min-height: 250px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.product-image::before,
+.product-image::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+}
+
+.product-image::before {
+  width: 180px;
+  height: 180px;
+  top: -45px;
+  right: -35px;
+}
+
+.product-image::after {
+  width: 110px;
+  height: 110px;
+  bottom: -40px;
+  left: -25px;
+}
+
+.image-one { background: #e6edf1; }
+.image-two { background: #ece7df; }
+.image-three { background: #e6efe8; }
+.image-four { background: #f0e5e9; }
+
+.product-visual {
+  width: 125px;
+  height: 155px;
+  border-radius: 1.5rem;
+  background: #171717;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  font-weight: 900;
+  transform: rotate(-7deg);
+  box-shadow: 18px 20px 30px rgba(0,0,0,0.16);
+  z-index: 2;
+}
+
+.product-badge {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 3;
+}
+
+.product-badge.sale {
+  background: var(--pickbo-accent);
+  color: #fff;
+}
+
+.product-title {
+  font-weight: 750;
+  line-height: 1.25;
+  margin-top: 0.35rem;
+}
+
+.rating {
+  color: #e98a1b;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.rating span {
+  color: var(--pickbo-muted);
+  letter-spacing: 0;
+}
+
+.price {
+  font-size: 1.15rem;
+}
+
+.old-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 0.85rem;
+}
+
+.deal-banner {
+  border: 1px solid var(--pickbo-border);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--pickbo-soft);
+}
+
+.feature-box {
+  border: 1px solid var(--pickbo-border);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  height: 100%;
+  background: #fff;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--pickbo-soft);
+  color: var(--pickbo-accent);
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-box h5 {
+  font-weight: 800;
+}
+
+.feature-box p {
+  color: var(--pickbo-muted);
+  margin-bottom: 0;
+}
+
+.footer {
+  background: #fafafa;
+  border-top: 1px solid var(--pickbo-border);
+}
+
+.footer-brand {
+  display: inline-block;
+}
+
+.footer h6 {
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  color: var(--pickbo-muted);
+  margin-bottom: 0.55rem;
+}
+
+.footer a:hover {
+  color: var(--pickbo-dark);
+}
+
+@media (max-width: 991.98px) {
+  .hero-card {
+    min-height: 390px;
+  }
+
+  .navbar-collapse {
+    padding-top: 1rem;
+  }
+
+  .hero-product {
+    right: 15%;
+    top: 22%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+
+  .display-3 {
+    font-size: 2.65rem;
+  }
+
+  .hero-card {
+    min-height: 360px;
+    padding: 1.5rem;
+  }
+
+  .hero-card h2 {
+    font-size: 2rem;
+  }
+
+  .hero-product {
+    width: 120px;
+    height: 165px;
+    font-size: 4.5rem;
+    right: 10%;
+    top: 18%;
+  }
+
+  .search-box {
+    flex-wrap: wrap;
+  }
+
+  .search-box .form-control {
+    width: calc(100% - 45px);
+  }
+
+  .search-box .btn {
+    width: 100%;
+    margin-top: 0.35rem;
+  }
+
+  .deal-banner {
+    padding: 1.5rem;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
